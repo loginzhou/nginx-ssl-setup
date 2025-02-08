@@ -37,12 +37,14 @@ nginx -t && systemctl reload nginx
 echo "正在申请 SSL 证书..."
 ~/.acme.sh/acme.sh --issue --nginx -d "$DOMAIN"
 
-# 5. 安装证书并配置 Nginx
-echo "正在安装 SSL 证书..."
-mkdir -p /etc/nginx/ssl
+# 5. 指定证书存放路径
+CERT_DIR="/root/cert/$DOMAIN"
+mkdir -p "$CERT_DIR"
+
+echo "正在安装 SSL 证书到 $CERT_DIR ..."
 ~/.acme.sh/acme.sh --install-cert -d "$DOMAIN" \
-    --key-file /etc/nginx/ssl/$DOMAIN.key \
-    --fullchain-file /etc/nginx/ssl/$DOMAIN.pem \
+    --key-file "$CERT_DIR/privkey.pem" \
+    --fullchain-file "$CERT_DIR/fullchain.pem" \
     --reloadcmd "systemctl reload nginx"
 
 # 6. 生成 HTTPS Nginx 配置
@@ -58,8 +60,8 @@ server {
     listen 443 ssl;
     server_name $DOMAIN;
 
-    ssl_certificate /etc/nginx/ssl/$DOMAIN.pem;
-    ssl_certificate_key /etc/nginx/ssl/$DOMAIN.key;
+    ssl_certificate $CERT_DIR/fullchain.pem;
+    ssl_certificate_key $CERT_DIR/privkey.pem;
 
     location / {
         root /var/www/html;
