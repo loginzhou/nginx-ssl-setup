@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# 安装必要的依赖
-sudo apt update
-sudo apt install -y curl nginx
-
 # 创建目标目录
 sudo mkdir -p /var/www/html
 
