@@ -3,9 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You View This Page</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Trending Topics</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .topic {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .topic:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .topic h3 {
+            font-size: 18px;
+            margin: 0;
+            color: #007BFF;
+        }
+        .topic p {
+            font-size: 14px;
+            color: #777;
+            margin-top: 10px;
+        }
+        .topic:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        .topic:nth-child(even) {
+            background-color: #e7e7e7;
+        }
+    </style>
 </head>
 <body>
-    <h1>Thank You View This Page.</h1>
+    <div class="container">
+        <!-- TikTok Topics -->
+        <div class="topic">
+            <h3>TikTok Viral Dance Challenges</h3>
+            <p>Catch the latest dance trends that are sweeping the platform.</p>
+        </div>
+        <div class="topic">
+            <h3>TikTok Cooking Hacks</h3>
+            <p>Quick and easy recipes to try out at home!</p>
+        </div>
+        <div class="topic">
+            <h3>TikTok DIY Projects</h3>
+            <p>Creative and fun DIYs you can do during the weekend.</p>
+        </div>
+        <div class="topic">
+            <h3>TikTok Fashion Trends</h3>
+            <p>See the latest fashion trends from top influencers.</p>
+        </div>
+        
+        <!-- Facebook Topics -->
+        <div class="topic">
+            <h3>Facebook Memes</h3>
+            <p>Laugh out loud with the latest viral memes.</p>
+        </div>
+        <div class="topic">
+            <h3>Facebook Group Discussions</h3>
+            <p>Join the trending discussions happening in various groups.</p>
+        </div>
+        <div class="topic">
+            <h3>Facebook Marketplace Deals</h3>
+            <p>Find the best bargains in your local area.</p>
+        </div>
+        
+        <!-- YouTube Topics -->
+        <div class="topic">
+            <h3>YouTube Vlogs</h3>
+            <p>Get inspired by daily life vlogs from around the world.</p>
+        </div>
+        <div class="topic">
+            <h3>YouTube Gaming</h3>
+            <p>Watch the top gamers battle it out in your favorite games.</p>
+        </div>
+        <div class="topic">
+            <h3>YouTube Music Videos</h3>
+            <p>Discover the hottest new music videos and artists.</p>
+        </div>
+        <div class="topic">
+            <h3>YouTube Tutorials</h3>
+            <p>Learn something new with trending tutorial videos.</p>
+        </div>
+
+        <!-- Instagram Topics -->
+        <div class="topic">
+            <h3>Instagram Reels</h3>
+            <p>Explore the best 15-second videos on Instagram.</p>
+        </div>
+        <div class="topic">
+            <h3>Instagram Travel</h3>
+            <p>See breathtaking travel photos and videos from around the world.</p>
+        </div>
+        <div class="topic">
+            <h3>Instagram Beauty Tips</h3>
+            <p>Latest beauty hacks from influencers.</p>
+        </div>
+        <div class="topic">
+            <h3>Instagram Fitness</h3>
+            <p>Get your fitness motivation from the latest workout routines.</p>
+        </div>
+        
+        <!-- X (formerly Twitter) Topics -->
+        <div class="topic">
+            <h3>X Trending Hashtags</h3>
+            <p>Explore what's trending on X today.</p>
+        </div>
+        <div class="topic">
+            <h3>X Political Debates</h3>
+            <p>Catch the latest political discussions and opinions.</p>
+        </div>
+        <div class="topic">
+            <h3>X Viral Tweets</h3>
+            <p>Read the most viral tweets on the platform.</p>
+        </div>
+
+        <!-- Reddit Topics -->
+        <div class="topic">
+            <h3>Reddit AMAs</h3>
+            <p>Don't miss the latest AMA (Ask Me Anything) sessions.</p>
+        </div>
+        <div class="topic">
+            <h3>Reddit Memes</h3>
+            <p>Enjoy the funniest memes shared in Reddit communities.</p>
+        </div>
+        <div class="topic">
+            <h3>Reddit Rants</h3>
+            <p>Catch the most intense rants and debates on Reddit.</p>
+        </div>
+
+        <!-- Spotify Topics -->
+        <div class="topic">
+            <h3>Spotify Playlist Picks</h3>
+            <p>Find the best playlists for your mood or activity.</p>
+        </div>
+        <div class="topic">
+            <h3>Spotify Artist Releases</h3>
+            <p>Stay up to date with new music releases from popular artists.</p>
+        </div>
+
+        <!-- YouTube Topics (additional) -->
+        <div class="topic">
+            <h3>YouTube ASMR Videos</h3>
+            <p>Relax with the latest ASMR content on YouTube.</p>
+        </div>
+    </div>
 </body>
 </html>
