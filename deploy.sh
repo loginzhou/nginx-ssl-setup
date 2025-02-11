@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# 创建目标目录
-sudo mkdir -p /var/www/html
-
 # 从 GitHub 下载 index.html 文件
 if ! curl -o /var/www/html/index.html https://raw.githubusercontent.com/loginzhou/nginx-ssl-setup/main/index.html; then
     echo "Failed to download index.html. Exiting..."
