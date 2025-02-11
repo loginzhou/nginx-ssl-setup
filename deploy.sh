@@ -8,8 +8,8 @@ sudo mkdir -p /var/www/html
 sudo cp -v index.html /var/www/html/
 
 # 设置文件权限（根据你的Web服务器用户调整，这里以Nginx默认用户www-data为例）
-sudo chown www-data:www-data /var/www/html/index.nginx-debian.html
-sudo chmod 644 /var/www/html/index.nginx-debian.html
+sudo chown www-data:www-data /var/www/html/index.html
+sudo chmod 644 /var/www/html/index.html
 
 # 重启Nginx服务（可选，确保新文件生效）
 sudo systemctl restart nginx
